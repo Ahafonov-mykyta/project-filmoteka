@@ -1,0 +1,15 @@
+body {
+    color: $mainColor;
+    background-color: $whiteColor;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}

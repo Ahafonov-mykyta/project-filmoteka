@@ -1,0 +1,60 @@
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin button($tc) {
+  height: 44px;
+  box-sizing: border-box;
+
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $tc;
+
+  background-color: transparent;
+  border: 1px solid $tc;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.active {
+    color: #ffffff;
+    border-color: $accentColor;
+    background-color: $accentColor;
+    filter: drop-shadow(0px 8px 43px rgba(255, 107, 1, 0.6));
+  }
+
+  &:hover {
+    color: #ffffff;
+    border-color: $accentColor;
+    background-color: $accentColor;
+    transform: scale(1.03);
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

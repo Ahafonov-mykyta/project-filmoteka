@@ -1,0 +1,91 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    padding: 20px;
+    gap: 8px;
+    background-color: #ffffff;
+
+    @include tablet {
+        width: 500x;
+        padding: 25px;
+    }
+}
+
+.form__title {
+    text-align: center;
+    color: $accentColor;
+    text-transform: uppercase;
+}
+
+.form__text {
+    text-transform: lowercase;
+}
+
+.form__label{
+    // font-size: 10px;
+    border-color: $lightTextColor;
+    &:hover,
+    &:focus {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: inherit;
+    @include tablet {
+        font-size: 16px;
+    }
+}
+.form__thumb {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 240px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid $mainColor;
+
+    &:hover,
+    &:focus {
+        background-color: $accentColor;
+        border-color: $accentColor;
+        transition: background-color 250ms;
+    }
+}
+
+.form__question {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+

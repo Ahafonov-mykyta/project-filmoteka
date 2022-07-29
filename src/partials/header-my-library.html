@@ -1,0 +1,47 @@
+<header class="header-my-library" id="header">
+    <a href="#header" class="link link__up isnt-show" title="Go up">
+        <svg class="link__up-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-up"></use>
+        </svg>
+    </a>
+    <div class="container">
+        <nav class="navigation">
+            <a class="logo link" href="./index.html">
+                <img src="./images/logo.svg" alt="logo" />
+                <span class="logo__text">Filmoteka</span>
+            </a>
+            <ul class="list navigation__list">
+                <li>
+                    <a class="link" href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a
+                        class="link link--current"
+                        id="library"
+                        href="./my-library.html"
+                        >My library</a
+                    >
+                </li>
+                <li>
+                    <a class="link" href="#" id="user">Login | Join</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__btns">
+            <button
+                type="button"
+                class="header__btns__button js-watched active"
+                name="watched"
+            >
+                watched
+            </button>
+            <button
+                type="button"
+                class="header__btns__button js-queue"
+                name="queue"
+            >
+                queue
+            </button>
+        </div>
+    </div>
+</header>

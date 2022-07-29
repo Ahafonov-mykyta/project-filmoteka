@@ -1,0 +1,193 @@
+.movies-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 40px);
+
+    padding: 48px 20px 40px 20px;
+    background-color: $whiteColor;
+
+    @media screen and (max-width: 767px) {
+        max-height: calc(100vh - 40px);
+        overflow-y: scroll;
+    }
+
+    @include mobile {
+        width: 440px;
+    }
+
+    @include tablet {
+        width: 704px;
+        padding: 40px 36px;
+    }
+
+    @include desktop {
+        width: 806px;
+        padding: 40px 12px;
+    }
+}
+
+.movies-modal__close-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+    color: $mainColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: $accentColor;
+    }
+}
+
+.movies-modal__close-icon {
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+// --- movie-modal__content ---
+
+.movie-modal__content {
+    @include tablet {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.movie-modal__img {
+    border-radius: 5px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+    @include tablet {
+        width: 264px;
+        margin-right: 68px;
+    }
+
+    @include desktop {
+        width: 375px;
+        margin-right: 16px;
+    }
+}
+
+.movie-modal__text {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        max-width: 260px;
+    }
+}
+.movie-modal__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include desktop {
+        font-size: 30px;
+    }
+}
+.movie-modal__figures {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.movie-modal__properties {
+    flex-shrink: 0;
+    margin-right: 40px;
+    color: $lightTextColor;
+    @include desktop {
+        margin-right: 80px;
+    }
+
+    & li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.movie-modal__values {
+    &:first-child {
+        color: $lightTextColor;
+    }
+    & li:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.movie-modal__vote-average {
+    padding: 1px 9px;
+    color: $whiteColor;
+    background-color: $accentColor;
+    border-radius: 5px;
+}
+
+.movie-modal__vote-count {
+    padding: 1px 5px;
+    background-color: $bgColor;
+    border-radius: 5px;
+}
+
+.movie-modal__about--title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.movie-modal__about--text {
+    margin-bottom: 20px;
+    line-height: 1.67;
+}
+
+.modal__watch-button {
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $mainColor;
+    background-color: $bgColor;
+    border: none;
+
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+
+    cursor: pointer;
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include desktop {
+        padding: 12px 15px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+        transform: scale(1.03);
+    }
+}
+
+.movies-modal__play-icon {
+    fill: currentColor;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
